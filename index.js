@@ -4,6 +4,8 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const profileRouter = require('./router/profileRouter')
 const authRouter = require('./router/authRouter')
+const cors = require('cors')
+app.use(cors())
 
 mongoose.connect(process.env.MONGO_DB_URL, {useNewUrlParser: true})
 
